@@ -8,6 +8,7 @@ function createApp() {
     // middleware -> age entre a chamada e bater no servidor
     // converte para json (body)
     app.use(express.json())
+    
     app.use("/api", router)
 
     return app
