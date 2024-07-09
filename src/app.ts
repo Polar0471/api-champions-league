@@ -1,5 +1,6 @@
 import express from "express"
 import router from "./routes"
+import cors from "cors"
 
 function createApp() {
     // definindo a application
@@ -10,6 +11,12 @@ function createApp() {
     app.use(express.json())
     
     app.use("/api", router)
+    
+    // camada que controla o acesso a api
+    const corsOptions = {
+        origin: "*"
+    }
+    app.use(cors())
 
     return app
 }
