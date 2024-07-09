@@ -1,12 +1,5 @@
-interface PlayerStatistics {
-    Overall: number;
-    Pace: number;
-    Shooting: number;
-    Passing: number;
-    Dribbling: number;
-    Defending: number;
-    Physical: number;
-}
+import PlayerStatistics from "./statistics-model";
+
 
 export interface PlayerModel {
     id: number;
