@@ -1,4 +1,5 @@
 import express, {Request, Response} from "express"
+import { getPlayer } from "./controllers/players-controller"
 
 function createApp() {
     // definindo a application
@@ -8,9 +9,7 @@ function createApp() {
     // converte para json (body)
     app.use(express.json())
 
-    app.get("/", (request: Request, response: Response) => {
-        response.status(200).json({ player: "beckham" })
-    })
+    app.get("/", getPlayer)
 
     return app
 }
